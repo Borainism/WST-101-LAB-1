@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | Aesthetic Menswear</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="landing.html">Home</a> | 
+            <a href="products.html">Shop</a> | 
+            <a href="cart.html">Cart</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Checkout</h1>
+        
+        <section>
+            <form action="#" method="GET">
+                
+                <fieldset>
+                    <legend>Shipping Address</legend>
+                    
+                    <div>
+                        <label for="full-name">Full Name:</label><br>
+                        <input type="text" id="full-name" name="customer_name" required>
+                    </div>
+                    
+                    <br>
+
+                    <div>
+                        <label for="street">Street Address:</label><br>
+                        <input type="text" id="street" name="address" required>
+                    </div>
+                    
+                    <br>
+
+                    <div>
+                        <label for="zip">Zip Code:</label><br>
+                        <input type="text" id="zip" name="zip_code" pattern="[0-9]*" inputmode="numeric" required>
+                    </div>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Payment Method</legend>
+                    <div>
+                        <input type="radio" id="credit" name="payment" value="card" checked>
+                        <label for="credit">Credit Card</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="paypal" name="payment" value="paypal">
+                        <label for="paypal">PayPal</label>
+                    </div>
+                </fieldset>
+                
+                <br>
+                
+                <button type="submit">Place Order</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <aside>
+            <h3>Order Summary</h3>
+            <p>Items (1): $75.00</p>
+            <p>Shipping: <strong>FREE</strong></p>
+            <p><strong>Total to Pay: $75.00</strong></p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Aesthetic Menswear Co.</p>
+    </footer>
+</body>
+</html>
