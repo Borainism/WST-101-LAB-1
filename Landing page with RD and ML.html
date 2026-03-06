@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aesthetic Menswear | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Task 2: Mobile-First Header & Nav */
+        header {
+            display: flex;
+            flex-direction: column; /* Mobile stack */
+            align-items: center;
+            padding: 1rem;
+            background: #fafafa;
+        }
+        nav ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        /* Task 4.3: Hero Section Flexbox */
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 70vh;
+            background: #f0f0f0;
+            /* Task 7: Fade-in Animation */
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Task 2.2: Desktop Layout */
+        @media (min-width: 769px) {
+            header { flex-direction: row; justify-content: space-between; }
+            nav ul { flex-direction: row; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><strong>AESTHETIC</strong></div>
+        <nav>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="products.html">New Arrivals</a></li>
+                <li><a href="products.html">Essentials</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Curated Minimalism for the Modern Man</h1>
+            <p>Elevate your daily rotation with our latest drop.</p>
+            <button type="button" onclick="location.href='products.html'">Shop Now</button>
+        </section>
+    </main>
+</body>
+</html>

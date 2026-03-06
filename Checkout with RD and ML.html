@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Task 4.2: Layout Organization with Flexbox */
+        @media (min-width: 769px) {
+            .checkout-container {
+                display: flex;
+                gap: 40px;
+                align-items: flex-start;
+            }
+            form { flex: 2; }
+            aside { flex: 1; background: #fafafa; padding: 20px; border-radius: 8px; }
+        }
+
+        /* Task 7: Enhancing Interactivity with @keyframes */
+        .order-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        /* Pulse effect on hover to draw attention */
+        .order-btn:hover {
+            animation: pulse-button 0.6s infinite alternate ease-in-out;
+        }
+
+        @keyframes pulse-button {
+            from {
+                transform: scale(1);
+                background-color: #000;
+            }
+            to {
+                transform: scale(1.05);
+                background-color: #333;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Checkout</h1>
+        <div class="checkout-container">
+            <form>
+                <fieldset>
+                    <legend>Shipping</legend>
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" required>
+                </fieldset>
+                <button type="submit" class="order-btn">Place Order</button>
+            </form>
+
+            <aside>
+                <h3>Order Summary</h3>
+                <p>Oversized Heavyweight Hoodie: $90.00</p>
+                <hr>
+                <strong>Total: $90.00</strong>
+            </aside>
+        </div>
+    </main>
+</body>
+</html>

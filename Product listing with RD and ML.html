@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop All - Aesthetic Menswear</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        img { max-width: 100%; height: auto; } /* Task 5.1 */
+
+        /* Task 3: Mobile Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* Task 6: Sidebar layout */
+        .shop-container { display: block; }
+
+        @media (min-width: 481px) {
+            .product-grid { grid-template-columns: repeat(2, 1fr); } /* Tablet */
+        }
+
+        @media (min-width: 769px) {
+            /* Task 6.2: Desktop Sidebar */
+            .shop-container {
+                display: grid;
+                grid-template-columns: 20% 80%;
+                gap: 20px;
+                padding: 20px;
+            }
+            /* Task 3.3: Desktop 4-column */
+            .product-grid { grid-template-columns: repeat(4, minmax(150px, 1fr)); }
+        }
+    </style>
+</head>
+<body>
+    <main class="shop-container">
+        <aside>
+            <h3>Filter By</h3>
+            <ul><li>Size</li><li>Color</li></ul>
+        </aside>
+        
+        <section>
+            <h1>All Products</h1>
+            <div class="product-grid">
+                <article>
+                    <img src="hoodie.jpg" alt="Oversized Beige Hoodie">
+                    <h3>Oversized Heavyweight Hoodie</h3>
+                    <p class="price">90.00</p>
+                    <a href="detail.html">View Details</a>
+                </article>
+                <article>
+                    <img src="trousers.jpg" alt="Wide Leg Pleated Trousers">
+                    <h3>Pleated Relaxed Trousers</h3>
+                    <p class="price">100.00</p>
+                    <a href="detail.html">View Details</a>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
